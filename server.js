@@ -45,6 +45,12 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page'
+  });
+});
+
 // /bad - send back json with errorMessage
 app.get('/bad', (req, res) => {
   res.send({
@@ -53,5 +59,5 @@ app.get('/bad', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server is up on port $port`);
+  console.log(`Server is up on port ${port}`);
 });
